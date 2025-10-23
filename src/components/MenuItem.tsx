@@ -1,7 +1,8 @@
 
 import type { MenuItem } from '../data'
+import type { AddItem } from '../types'
 
-export default function MenuItem({name, emoji, ingredients, price, addItem}: MenuItem & {addItem: (name: string, price: number) => void} ) {
+export default function MenuItem({name, emoji, ingredients, price, addItem}: MenuItem & AddItem ) {
     
     //console.log(addItem)
     
