@@ -11,7 +11,7 @@ type Order = {
 
 function App() {
 
-  const [menuItems, setMenuItems] = useState(menuArray)
+  const [menuItems] = useState(menuArray)
   const [orderItems, setOrderItems] = useState<Order[]>([])
   const [isModal, setIsModal] = useState(false)
 
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <>
-      <header className='bg-[url(/header-img.jpg)] bg-cover text-white sm:w-[600px] mx-auto p-12'>
+      <header className='bg-[url(header-img.jpg)] bg-cover text-white sm:w-[600px] mx-auto p-12'>
         <h1 className='text-5xl'>Jimmy's Diner</h1>
         <h2>The best burgers and pizzas in town.</h2>
       </header>
@@ -84,7 +84,7 @@ function App() {
         className='h-screen w-screen fixed top-0'>  
         <div 
           onClick={e => e.stopPropagation()}
-          className='flex flex-col fixed m-auto bg-white justify-center w-11/12 shadow-2xl inset-0 p-4 py-6 self-center'
+          className='flex flex-col fixed m-auto bg-white justify-center w-11/12 shadow-2xl inset-0 p-4 py-6 self-center max-w-lg'
         >
           <h3 className='text-3xl font-sans text-center mb-6'>Enter card details</h3>
           <form className='flex flex-col gap-3 font-sans'>
