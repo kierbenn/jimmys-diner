@@ -45,8 +45,8 @@ function App() {
 
   return (
     <>
-      <header className='bg-[url(header-img.jpg)] bg-cover text-white sm:w-[600px] mx-auto p-12'>
-        <h1 className='text-5xl'>Jimmy's Diner</h1>
+      <header className='bg-[url(header-img.jpg)] bg-cover text-white sm:w-[600px] mx-auto p-6 sm:p-12'>
+        <h1 className='text-4xl sm:text-5xl'>Jimmy's Diner</h1>
         <h2>The best burgers and pizzas in town.</h2>
       </header>
 
@@ -55,8 +55,8 @@ function App() {
           <MenuItem key={item.id} {...item} addItem={handleAddItem} />
         )}
         {orderItems.length > 0 && (
-          <section className='pt-8'>
-            <h2 className='text-2xl text-center mb-6'>Your order</h2>
+          <section className='pt-4 sm:pt-8'>
+            <h2 className='text-2xl text-center mb-4 sm:mb-6'>Your order</h2>
             {orderItems.map((order, idx) =>
               <div className='flex items-center gap-2 mt-2' key={idx}>
                 <h3 className='text-2xl'>{order.name}</h3>
@@ -92,7 +92,7 @@ function App() {
             <input className='border border-gray-300 p-2 rounded-[3px]' type="number" name="cardNumber" id="cardNumber" placeholder='Enter card number' />
             <input className='border border-gray-300 p-2 rounded-[3px]' type="number" name="ccv" id="ccv" placeholder='Enter your CCV' />
             <button
-              className='bg-[#16DB99] text-white font-sans w-full rounded-[3px] py-3 my-6'
+              className='bg-[#16DB99] text-white font-sans w-full rounded-[3px] py-3 mt-6'
             >Pay</button>
           </form>
         </div>

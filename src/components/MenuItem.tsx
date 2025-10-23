@@ -10,15 +10,15 @@ export default function MenuItem({name, emoji, ingredients, price, addItem}: Men
     }
 
     return (
-        <section className='flex items-center gap-8 border-b border-[#DEDEDE] py-10'>
-          <div className="text-7xl">{emoji}</div>
+        <section className='flex items-center gap-8 border-b border-[#DEDEDE] py-4 sm:py-10'>
+          <div className="text-5xl sm:text-7xl">{emoji}</div>
           <div>
-            <h3 className="text-3xl">{name}</h3>
+            <h3 className="text-2xl sm:text-3xl">{name}</h3>
             <p className='text-gray-400'>{ingredients.join(', ')}</p>
             <p className='text-xl'>${price}</p>
           </div>
           <button 
-            className="rounded-full border border-[#DEDEDE] size-[50px] ml-auto text-3xl font-extralight font-[Inter]"
+            className="rounded-full border border-[#DEDEDE] size-[40px] sm:size-[50px] ml-auto text-3xl font-extralight font-[Inter]"
             onClick={handleAddItem}
           >+</button>
         </section>
